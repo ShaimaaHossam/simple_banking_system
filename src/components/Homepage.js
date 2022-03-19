@@ -5,15 +5,15 @@ export default class Homepage extends React.Component{
     render(){
         return (
            <>
-              <div className="lg:flex justify-center mt-12 text-center">
-                <div className="par lg:w-1/2 my-auto text-center">
+              <div className="justify-center mt-12 text-center lg:flex">
+                <div className="my-auto text-center par lg:w-1/2">
                     <h1 className="text-3xl font-bold text-gray-800">The Best Payments Experience</h1>
-                    <p className="text-center mt-5">Simple and secure way to transfer money</p>
+                    <p className="mt-5 text-center">Simple and secure way to transfer money</p>
                     <div className="mt-8">
-                        <Link to="/" className="bg-purple-900 py-3 hover:bg-purple-800 transitioning text-white px-12 rounded-md">Make a payment</Link>
+                        <Link to="/transfer" className="px-12 py-3 text-white bg-purple-900 rounded-md hover:bg-purple-800 transitioning">Make a payment</Link>
                     </div>
                 </div>
-                <div className="w-1/2 lg:block hidden">
+                <div className="hidden w-1/2 lg:block">
                     <img className="w-1/2" src={image} />
                 </div>
               </div>

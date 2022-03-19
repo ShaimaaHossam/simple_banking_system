@@ -11,7 +11,7 @@ router.route('/add').post((req,res)=>{
     const to = req.body.to;
     const amount = req.body.amount;
     
-    const newTrans = new Customer({
+    const newTrans = new Transfer({
         from,
         to,
         amount
@@ -21,4 +21,5 @@ router.route('/add').post((req,res)=>{
         .then(()=>res.json('Transaction done'))
         .catch(err => res.status(400).json('Error: '+err));
 })
+
 module.exports = router;

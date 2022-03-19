@@ -5,6 +5,7 @@ import Homepage from "./components/Homepage";
 import Customers from "./components/Customers";
 import Transfer from "./components/Transfer";
 import Info from "./components/Info";
+import History from "./components/History";
 import {useEffect, useState} from 'react'
 import axios from 'axios'
 function App() {
@@ -28,7 +29,8 @@ function App() {
         <Route path="/" exact element={<Homepage />} />
         <Route path="/ViewCustomers"  element={<Customers customers={customers} />} />
         <Route path="/ViewCustomers/:id"  element={<Info /> } />
-        <Route path="/Transfer"  element={<Transfer />} />
+        <Route path="/transfer"  element={<Transfer customers={customers} />} />
+        <Route path="/transactions"  element={<History  />} />
       </Routes>
     </Router>
   );

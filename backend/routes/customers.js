@@ -30,4 +30,16 @@ custRouter.route('/add').post((req,res)=>{
         .then(()=>res.json('Customer Added'))
         .catch(err => res.status(400).json('Error: '+err));
 })
+custRouter.route('/update/:id').post((req, res) => {
+    Customer.findById(req.params.id)
+      .then(customer => {
+        customer.balance = req.body.balance;
+  
+        customer.save()
+          .then(() => res.json('Customer updated!'))
+          .catch(err => res.status(400).json('Error: ' + err));
+      })
+      .catch(err => res.status(400).json('Error: ' + err));
+  });
+
 module.exports = custRouter;

@@ -13,6 +13,9 @@ export default class Navbar extends React.Component{
                         <li className="px-4 py-2 text-white transitioning hover:bg-slate-50 hover:text-purple-900 hover:cursor-pointer">
                             <Link to="/ViewCustomers">View Customers</Link>
                         </li>
+                        <li className="px-4 py-2 text-white transitioning hover:bg-slate-50 hover:text-purple-900 hover:cursor-pointer">
+                            <Link to="/transactions">View Transactions</Link>
+                        </li>
                    </div>
                    
                   <li className="px-6 py-1 mx-4 my-2 text-white bg-pink-500 rounded-md hover:cursor-pointer hover:bg-pink-400 transitioning">
